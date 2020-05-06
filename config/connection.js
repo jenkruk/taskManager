@@ -1,8 +1,5 @@
 // Header space for easier readability
 
-
-// Inside the connection.js file, setup the code to connect Node to MySQL.
-
 // Set up MySQL connection.
 var mysql = require("mysql");
 
@@ -23,8 +20,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Export the connection
+// Export the connection for the orm to use
 module.exports = connection;
-
-
-// Doug - how is this referencing node?

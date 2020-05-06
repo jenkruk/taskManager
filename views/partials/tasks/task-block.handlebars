@@ -1,9 +1,11 @@
+{{!-- spacer --}}
+
 <li>
 	{{name}}
 
-	<button class="change-status" data-id="{{id}}" data-newtask="{{complete}}">
-		{{#if complete}}COMPLETE{{else}}ADD BACK TO LIST!{{/if}}
+	<button class="change-status" data-id="{{id}}">
+		{{#if completed}}COMPLETED{{else}}ADD TO TO-DO LIST{{/if}}
 	</button>
 
-	<button class="delete-task" data-id="{{id}}">DELETE!</button>
+	<button class="delete-task" data-id="{{id}}">DELETE</button>
 </li>

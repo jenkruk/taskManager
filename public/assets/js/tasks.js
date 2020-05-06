@@ -2,19 +2,19 @@
 $(function() {
     $(".change-status").on("click", function(event) {
       var id = $(this).data("id");
-      var newtask = $(this).data("newtask");
+      var newStatus = $(this).data("newstatus");
   
-      var newtaskState = {
-        status: newtask
+      var newStatusState = {
+        completed: newStatus
       };
   
       // Send the PUT request.
       $.ajax("/api/tasks/" + id, {
         type: "PUT",
-        data: newtaskState
+        data: newStatusState
       }).then(
         function() {
-          console.log("changed task to", newtask);
+          console.log("changed task to", newStatus);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,7 +27,7 @@ $(function() {
   
       var newTask = {
         name: $("#task").val().trim(),
-        status: $("[name=status]:checked").val().trim()
+        status: $("[name=newTask]").val().trim()
       };
   
       // Send the POST request.

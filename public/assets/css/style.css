@@ -1,7 +1,8 @@
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #b2dadd;
+    width: 33%;
   }
   
   .label {
@@ -18,3 +19,7 @@ li {
     margin-bottom: 5px;
   }
   
+  button {
+    border-radius: 1px;
+    margin: 0 5px 0 3px;
+  }

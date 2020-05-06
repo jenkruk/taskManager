@@ -5,33 +5,34 @@
 
 {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
 
-<h1>To-Do List</h1>
-
-<h2>Done</h2>
-
-<ul>
-  {{#each tasks}}
-    {{#unless complete}}
-      {{> tasks/task-block complete=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<h1>Task Manager</h1>
 
 <h2>To-Do</h2>
 
-<ul>
+<ol>
   {{#each tasks}}
-    {{#if complete}}
-      {{> task/task-block complete=false}}
+    {{#unless completed}}
+      {{> tasks/task-block completed=true}}
+    {{/unless}}
+  {{/each}}
+</ol>
+
+<h2>Done</h2>
+
+<ol>
+  {{#each tasks}}
+    {{#if completed}}
+      {{> tasks/task-block completed=false}}
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>Add a Task</h2>
-<form class="create-form">
+<form class="create-form" action="/" method="POST">
+
   <div class="form-group">
     <label for="task">Add a new task to your To-Do list:</label>
-    <input type="text" id="task" name="task">
+    <input type="text" id="task" name="newTask">
   </div>
 
   <button type="submit">Add Task</button>

@@ -23,11 +23,11 @@ router.get("/", function(req, res) {
 
 router.post("/api/tasks", function(req, res) {
   task.create([
-    "name", "complete"
+    "name", "completed"
   ], [
-    req.body.name, req.body.complete
+    req.body.name, req.body.completed
   ], function(result) {
-    // Send back the ID of the new quote
+    // Send back the ID of the new task
     res.json({ id: result.insertId });
   });
 });
@@ -38,7 +38,7 @@ router.put("/api/tasks/:id", function(req, res) {
   console.log("condition", condition);
 
   task.update({
-    complete: req.body.complete
+    completed: req.body.completed
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

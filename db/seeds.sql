@@ -2,10 +2,15 @@
 
 -- In this file, write insert queries to populate the tasks table with at least three entries.
 -- Insert more than one row at a time
- INSERT INTO tasks (task_name)
+ INSERT INTO tasks (name)
  VALUES ("Learn Sequelize"),
  ("Understand Orm"),
  ("Eat Ice Cream")
+
+ INSERT INTO tasks (name, completed)
+ VALUES ("Workout", true),
+ ("Eat Lunch", true),
+ ("Make Bed", true)
 
 -- Run the schema.sql and seeds.sql files into the mysql server from the command line
 
