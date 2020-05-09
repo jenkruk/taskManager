@@ -5,11 +5,9 @@
 
 {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
 
-<div class="container-fluid">
+<div class="container shadow">
 
-<h1 class="title col-sm-12 mt-5">Task Manager</h1>
-
-<hr>
+<h1 class="title col-sm-12 pt-5 pb-4 border-bottom border-muted">Task Manager</h1>
 
 <!-- row enclosing all three columns -->
 <div class="row col-sm-12 d-flex justify-content-center"> 
@@ -17,6 +15,7 @@
   <div class="row to-do col-sm-4">
   <h2 class="heading border-bottom border-muted mt-5">To-Do</h2>
 
+    <div class="col-sm mt-2 tasks">
     <ol>
       {{#each tasks}}
         {{#unless completed}}
@@ -24,14 +23,15 @@
         {{/unless}}
       {{/each}}
     </ol>
+    </div>
   </div> <!-- end to-do column -->
 
-  <div class="row add col-sm-4 d-inline-block h-25 pb-3 pt-3">
+  <div class="row add col-sm-3 d-inline-block h-25 p-3 mx-3">
 
     <form class="create-form" action="/" method="POST">
 
       <div class="form-group">
-        <label for="task" class="font-weight-bold text-justify pt-1 pb-2 text-uppercase"><h5>Add a new task to your To-Do list:</h5></label>
+        <label for="task" class="font-weight-bold text-justify pt-1 pb-2 text-uppercase pt-5 mt-5"><h5>Add a new task:</h5></label>
         <input type="text" id="task" name="newTask">
       </div>
 
@@ -42,6 +42,7 @@
   <div class="row done col-sm-4">
   <h2 class="heading border-bottom border-muted mt-5">Done</h2>
 
+  <div class="row col-sm done mt-2">
   <ol>
     {{#each tasks}}
       {{#if completed}}
@@ -49,6 +50,7 @@
       {{/if}}
     {{/each}}
   </ol>
+  </div>
   </div> <!-- end done column -->
 
 

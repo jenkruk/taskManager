@@ -1,7 +1,7 @@
 // Header space for easier readability
 
 // Import (require) connection.js into orm.js
-var db = require("../config/connection.js");
+var db = require("./connection");
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.

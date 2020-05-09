@@ -1,11 +1,23 @@
 /* head space */
 
+* {
+  font-family: 'Playfair Display', serif; 
+  color:darkolivegreen;
+}
+
+.container {
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+/* Task Manager Heading  */
 .title {
   width: 100%;
   margin: 2vh 0 2vh 0;
   text-align: center;
 }
 
+/* To-Do and Done headings  */
 .heading {
   width: 90%;
   text-align: center;
@@ -14,29 +26,34 @@
   margin: 0 auto;
 }
 
+/* To-Do and Done Columns  */
+.to-do,
+.done {
+  display: flex;
+  justify-content: center;
+}
+
+/* add task column  */
 .add {
-  margin: 0 1vw 0 1vw;
   text-align: center;
 }
 
-ol {
-width: 90%;
-margin: 0 auto;
-padding-left: 4vw;
-} 
-
-li {
-  margin: 1vh 0 1vh 0;
-}
-
+/* delete buttons  */
 .delete-task {
   position: static;
-  margin-right: 0px;
+  font-weight: bold;
+  color: darkred;
 }
  
+/* check marks and add buttons  */
 .change-status {
-  margin-left: 3vw;
-  
+  margin-left: 4vw;
+}
+
+/* all buttons  */
+button {
+  background-color: white;
+  border-color: rgb(119, 150, 168);
 }
 
  
