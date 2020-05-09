@@ -2,8 +2,8 @@
 $(function() {
     $(".change-status").on("click", function(event) {
       var id = $(this).data("id");
-      var newStatus = $(this).data("newstatus");
-  
+      var newStatus = $(this).data("completed");
+      console.log(newStatus);
       var newStatusState = {
         completed: newStatus
       };
@@ -27,7 +27,6 @@ $(function() {
   
       var newTask = {
         name: $("#task").val().trim(),
-        status: $("[name=newTask]").val().trim()
       };
   
       // Send the POST request.

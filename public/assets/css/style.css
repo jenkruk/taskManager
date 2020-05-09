@@ -1,25 +1,42 @@
+/* head space */
+
+.title {
+  width: 100%;
+  margin: 2vh 0 2vh 0;
+  text-align: center;
+}
+
+.heading {
+  width: 90%;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 0 auto;
+}
+
+.add {
+  margin: 0 1vw 0 1vw;
+  text-align: center;
+}
+
+ol {
+width: 90%;
+margin: 0 auto;
+padding-left: 4vw;
+} 
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #b2dadd;
-    width: 33%;
-  }
+  margin: 1vh 0 1vh 0;
+}
+
+.delete-task {
+  position: static;
+  margin-right: 0px;
+}
+ 
+.change-status {
+  margin-left: 3vw;
   
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
-  button {
-    border-radius: 1px;
-    margin: 0 5px 0 3px;
-  }
+}
+
+ 

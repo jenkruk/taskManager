@@ -7,8 +7,8 @@ var express = require("express");
 var router = express.Router();
 // task.js
 // Create the router for the app, and export the router at the end of your file.
-// Import the model (task.js) to use its database functions.
-var task = require("../models/task.js");
+// Import the model (Task.js) to use its database functions.
+var task = require("../models/Task.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -25,7 +25,7 @@ router.post("/api/tasks", function(req, res) {
   task.create([
     "name", "completed"
   ], [
-    req.body.name, req.body.completed
+    req.body.name, false
   ], function(result) {
     // Send back the ID of the new task
     res.json({ id: result.insertId });

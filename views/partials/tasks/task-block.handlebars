@@ -2,9 +2,9 @@
 
 <li>
 	{{name}}
-
-	<button class="change-status" data-id="{{id}}">
-		{{#if completed}}COMPLETED{{else}}ADD TO TO-DO LIST{{/if}}
+	
+	<button class="change-status" data-completed="{{completed}}" data-id="{{id}}">
+		{{#if completed}}DONE{{else}}ADD{{/if}}
 	</button>
 
 	<button class="delete-task" data-id="{{id}}">DELETE</button>

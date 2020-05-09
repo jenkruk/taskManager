@@ -1,7 +1,7 @@
 // Header space for easier readability
 
 // Import (require) connection.js into orm.js
-var connection = require("../config/connection.js");
+var db = require("../config/connection.js");
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -48,7 +48,7 @@ var orm = {
 // selectAll()
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
-      connection.query(queryString, function(err, result) {
+      db.query(queryString, function(err, result) {
         if (err) {
           throw err;
         }
@@ -69,7 +69,7 @@ create: function(table, cols, vals, cb) {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    db.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
       }
@@ -88,7 +88,7 @@ update: function(table, objColVals, condition, cb) {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    db.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -102,7 +102,7 @@ update: function(table, objColVals, condition, cb) {
     queryString += " WHERE ";
     queryString += condition;
 
-    connection.query(queryString, function(err, result) {
+    db.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
