@@ -4,7 +4,7 @@
 var orm = require("../config/orm");
 
 // Also inside tasks.js, create the code that will call the ORM functions using task specific input for the ORM.
-var task = {
+var Task = {
     all: function(cb) {
       orm.all("tasks", function(res) {
         cb(res);
@@ -29,4 +29,4 @@ var task = {
   };
 
 // Export at the end of the tasks.js file.
-module.exports = task;
+module.exports = Task;
