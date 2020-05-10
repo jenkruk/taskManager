@@ -8,11 +8,11 @@ var router = express.Router();
 // task.js
 // Create the router for the app, and export the router at the end of your file.
 // Import the model (Task.js) to use its database functions.
-var Task = require("../models/Task");
+var Grape = require("../models/Grape");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  Task.all(function(data) {
+  Grape.all(function(data) {
     var hbsObject = {
       tasks: data
     };
@@ -22,7 +22,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/tasks", function(req, res) {
-  Task.create([
+  Grape.create([
     "name", "completed"
   ], [
     req.body.name, false
@@ -37,7 +37,7 @@ router.put("/api/tasks/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  Task.update({
+  Grape.update({
     completed: req.body.completed
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -52,7 +52,7 @@ router.put("/api/tasks/:id", function(req, res) {
 router.delete("/api/tasks/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  Task.delete(condition, function(result) {
+  Grape.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
