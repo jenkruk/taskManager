@@ -8,7 +8,7 @@ var router = express.Router();
 // task.js
 // Create the router for the app, and export the router at the end of your file.
 // Import the model (Task.js) to use its database functions.
-var task = require("../models/Task.js");
+var task = require("../models/Task");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
