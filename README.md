@@ -4,7 +4,7 @@ Keep your life on track with this easy to use To Do list!
 
 
 ## Add a New Task
-![list](./app/public/assets/images/start.jpg)
+![list](./app/public/assets/images/start.png)
 
 ## Click on the checkmark when your task has been completed
 ![start](./app/public/assets/images/newTask.jpg)
