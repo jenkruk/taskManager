@@ -4,16 +4,16 @@ Keep your life on track with this easy to use To Do list!
 
 
 ## Add a New Task
-![list](./app/public/assets/images/start.png)
+![list](./public/assets/images/start.jpg)
 
 ## Click on the checkmark when your task has been completed
-![start](./app/public/assets/images/newTask.jpg)
+![start](./public/assets/images/newTask.jpg)
 
 ## Your task now shows up in your done list (So satisfying!)
-![check](./app/public/assets/images/newDone.jpg)
+![check](./public/assets/images/newDone.jpg)
 
 ## Click on the red X to delete any tasks you no longer want on your lists
-![your-new-friend](./app/public/assets/images/delete.jpg)
+![your-new-friend](./public/assets/images/delete.jpg)
 
 ## Built With
 
