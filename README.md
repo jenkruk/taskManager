@@ -23,6 +23,7 @@ Keep your life on track with this easy to use To Do list!
 * [jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery)
 * [Node.js / Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
 * [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+* [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
 
 ## Deployed Link
 
