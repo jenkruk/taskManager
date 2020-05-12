@@ -1,10 +1,6 @@
 {{!-- Header space for easier readability --}}
 
 
-{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
-
-{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-
 <div class="container shadow-lg">
 
 <div class="row d-flex justify-content-center">
@@ -14,6 +10,7 @@
 <!-- row enclosing all three columns -->
 <div class="row col-sm-12 d-flex justify-content-center"> 
 
+  <!-- start to-do column -->
   <div class="row to-do col-sm-4">
   <h2 class="heading border-bottom border-secondary mt-5">To-Do</h2>
 
@@ -28,6 +25,8 @@
     </div>
   </div> <!-- end to-do column -->
 
+
+  <!-- start add-a-task column  -->
   <div class="row add col-sm-3 d-inline-block mx-3">
 
     <form class="create-form" action="/" method="POST">
@@ -41,6 +40,7 @@
     </form>
   </div> <!-- end add-a-task column -->
 
+  <!-- start done column -->
   <div class="row done col-sm-4">
   <h2 class="heading border-bottom border-secondary mt-5">Done</h2>
 

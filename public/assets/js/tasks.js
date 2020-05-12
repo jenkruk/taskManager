@@ -1,5 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+  //Move to-do to done and vice versa
     $(".change-status").on("click", function(event) {
       var id = $(this).data("id");
       var newStatus = $(this).data("completed");
@@ -20,7 +21,8 @@ $(function() {
         }
       );
     });
-  
+
+  // sumbit new task to to-do column
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
@@ -41,7 +43,7 @@ $(function() {
         }
       );
     });
-  
+  // delete task
     $(".delete-task").on("click", function(event) {
       var id = $(this).data("id");
   
